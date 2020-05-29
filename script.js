@@ -10,10 +10,11 @@ window.onload = () =>
         image.src     = imgURL;
         download.href = imgURL;
 
-        image.style.display = "block";
+        image.style.display                                  = "block";
         document.querySelector(".telecharger").style.display = "block";
+        document.querySelector(".zoom").style.display        = "block";
 
-        image.onclick = () => divImg.classList.toggle("fullscreen");
+        document.querySelector(".zoom").onclick = () => divImg.classList.toggle("fullscreen");
   };
  
 };

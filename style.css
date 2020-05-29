@@ -18,33 +18,33 @@ h1{
     background-color: rgba(0, 0, 0, 0.2);
     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     transition:  0.5s;
+    position: relative;
+    margin: auto;
 }
 
 .fenetre{
-    position: relative;
-    margin: auto;
+    
     margin-top: 3rem;
     width: 60%;
     min-height: 20vh;
 }
 
 .fullscreen{
-    position: absolute;
+
     width: 100%;
     margin: 0;
-    top:0;
-    left: 0;
+
 }
 
-.add, .telecharger{
+.add, .telecharger, .zoom{
     position: absolute;
     cursor: pointer;
     transition: 0.5s;
 }
 
 .add{
-    bottom: 1rem;  
-    right: 1rem;
+    bottom: .6rem;  
+    right: .7rem;
 }
 
 .add .material-icons{
@@ -53,9 +53,20 @@ h1{
 }
 
 .telecharger{
-    bottom: 0;
+    top: 0;
     right: 0;
     display: none;
+}
+
+.zoom{
+    bottom: 0;
+    left: 0;
+    display: none;
+}
+
+.zoom .material-icons{
+    color: white;
+    font-size: 2rem;
 }
 
 .telecharger .material-icons{
@@ -63,14 +74,9 @@ h1{
     font-size: 2rem;
 }
 
-.add:hover{
+.add:active, .telecharger:active, .zoom:active{
     transform: rotate(360deg);
 }
-
-.telecharger:hover{
-    transform: rotate(360deg);
-}
-
 
 img{
     width: 100%;
