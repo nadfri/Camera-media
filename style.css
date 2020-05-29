@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #ededed;
+}
+
+h1{
+    text-align: center;
+    color: teal;
+}
+
+#divImg{
+    border: solid 5px teal;
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    transition:  0.5s;
+}
+
+.fenetre{
+    position: relative;
+    margin: auto;
+    margin-top: 3rem;
+    width: 60%;
+    min-height: 20vh;
+}
+
+.fullscreen{
+    position: absolute;
+    width: 100%;
+    margin: 0;
+    top:0;
+    left: 0;
+}
+
+.add, .telecharger{
+    position: absolute;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.add{
+    bottom: 1rem;  
+    right: 1rem;
+}
+
+.add .material-icons{
+    font-size: 3rem;
+    color: orangered;
+}
+
+.telecharger{
+    bottom: 0;
+    right: 0;
+    display: none;
+}
+
+.telecharger .material-icons{
+    color: royalblue;
+    font-size: 2rem;
+}
+
+.add:hover{
+    transform: rotate(360deg);
+}
+
+.telecharger:hover{
+    transform: rotate(360deg);
+}
+
+
+img{
+    width: 100%;
+    display: none;
+}
+
+input{
+    display: none;
+}
