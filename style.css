@@ -1,7 +1,9 @@
 *{ margin: 0; padding: 0; box-sizing: border-box;}
 
 body{ background-color: #ededed;}
+
 h1{ text-align: center; color: teal;}
+
 input{ display: none;}
 
 #container{

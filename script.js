@@ -28,12 +28,13 @@ window.onload = () =>
 
 
   //*************Service Worker ******************/
-  // Register service worker to control making site work offline
-  if('serviceWorker' in navigator) {
+  if('serviceWorker' in navigator) //Register service worker to control making site work offline
+  {
     navigator.serviceWorker
-            .register('/Camera-media/sw.js',{scope: '/Camera-media/'})
-            .then(function() { console.log('Service Worker for Camera-Media Registered'); });
+             .register('/Camera-media/sw.js',{scope: '/Camera-media/'})
+             .then(function() { console.log('Service Worker for Camera-Media Registered'); });
   }
 
+  
 };
 
