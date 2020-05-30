@@ -4,5 +4,5 @@ Utilisation de la camera d'un mobile et affichage de la photo prise et enregistr
 # PWA
 Supporte l'installation sur mobile via Service Worker et Manifest
 
-# Link to test in (optimized for mobile)
+# Link to test it (optimized for mobile)
 https://nadfri.github.io/Camera-media/

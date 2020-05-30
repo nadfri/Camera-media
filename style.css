@@ -1,6 +1,6 @@
 *{ margin: 0; padding: 0; box-sizing: border-box;}
 
-body{ background-color: #ededed;}
+body{ background-color: #ededed;overflow-x: hidden;}
 
 h1{ text-align: center; color: teal;}
 
