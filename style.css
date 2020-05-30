@@ -13,30 +13,39 @@ h1{
     color: teal;
 }
 
-#divImg{
-    border: solid 5px teal;
+#container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.vignette{
+    margin: 0.5rem;
+    width: 20vw;
+    object-fit: cover;
     background-color: rgba(0, 0, 0, 0.2);
     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     transition:  0.5s;
-    position: relative;
-    margin: auto;
-}
-
-.fenetre{
-    
-    margin-top: 3rem;
-    width: 60%;
-    min-height: 20vh;
+    cursor: zoom-in;
+    align-self: center;
+    border: solid 5px teal;
 }
 
 .fullscreen{
-
+    position: relative;
+    margin:0;
     width: 100%;
-    margin: 0;
-
+    order:-1;
+    z-index: 2;
+    cursor: zoom-out;
 }
 
-.add, .telecharger, .zoom{
+input{
+    display: none;
+}
+
+
+.add, .telecharger{
     position: absolute;
     cursor: pointer;
     transition: 0.5s;
@@ -47,42 +56,41 @@ h1{
     right: .7rem;
 }
 
+.telecharger{
+    top: 3rem;
+    right: 0.5rem;
+    transform: translateX(0);
+    z-index: 3;
+}
+
 .add .material-icons{
     font-size: 3rem;
     color: orangered;
 }
 
-.telecharger{
-    top: 0;
-    right: 0;
-    display: none;
-}
-
-.zoom{
-    bottom: 0;
-    left: 0;
-    display: none;
-}
-
-.zoom .material-icons{
-    color: white;
-    font-size: 2rem;
-}
-
 .telecharger .material-icons{
     color: royalblue;
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
-.add:active, .telecharger:active, .zoom:active{
+.add:active, .telecharger:active{
     transform: rotate(360deg);
 }
 
-img{
-    width: 100%;
+.hidden{
+    transform: translateX(200%);
+}
+
+.divOverlay{
     display: none;
 }
 
-input{
-    display: none;
+.overlay{
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: teal;
+    opacity: 0.5;
+    z-index: 1;
 }

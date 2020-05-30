@@ -2,19 +2,29 @@ window.onload = () =>
 {
     "use strict";
 
-    input.onchange = () => 
+    input.onchange    = () => 
     {
-        const file = input.files[0];
+      const divOverlay  = document.querySelector(".divOverlay");
+      const telecharger = document.querySelector(".telecharger");
+      const file        = input.files[0];
 
-        const imgURL  = URL.createObjectURL(file);
-        image.src     = imgURL;
-        download.href = imgURL;
+      if (input.files[0] != undefined) //continue l'execution uniquement si une photo a été choisi
+      {
+        const imgURL    = URL.createObjectURL(file);
+        const image     = document.createElement("img");
+        image.src       = imgURL;
+        image.className = "vignette";
+        container.appendChild(image);
 
-        image.style.display                                  = "block";
-        document.querySelector(".telecharger").style.display = "block";
-        document.querySelector(".zoom").style.display        = "block";
+        image.onclick = () => 
+        {
+          divOverlay .classList.toggle("overlay");
+          image      .classList.toggle("fullscreen");
+          telecharger.classList.toggle("hidden");
 
-        document.querySelector(".zoom").onclick = () => divImg.classList.toggle("fullscreen");
-  };
- 
+          download.href = imgURL;
+        };
+      }
+    };
 };
+

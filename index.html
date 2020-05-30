@@ -11,23 +11,15 @@
 
 <body>
     <h1>Ma Camera</h1>
-    <div id="divImg" class="fenetre">
-      
-      <img src="" alt="photo" id="image">
+    <div id="container">
+    <div class="divOverlay"></div>
 
-      <span class="telecharger">
-        <a href="" download="MaPhoto" id="download">
-          <i class="material-icons">save</i>
-        </a>
-      </span>
+    <a href="" download="MaPhoto" id="download" class="telecharger hidden"><i class="material-icons">save</i></a>
 
-      <span class="zoom"><i class="material-icons">zoom_out_map</i></span>
+    <label for="input" class="add"><i class="material-icons">camera_alt</i></label>
+    <input class="hidden" type="file" id="input" accept="image/*" capture>
 
-    </div>
-
-    <label for="input" class="add">
-      <i class="material-icons">camera_alt</i>
-    </label><input type="file" id="input" accept="image/*" capture>
+  </div>
 
 
 </body>
