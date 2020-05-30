@@ -1,17 +1,8 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+*{ margin: 0; padding: 0; box-sizing: border-box;}
 
-body{
-    background-color: #ededed;
-}
-
-h1{
-    text-align: center;
-    color: teal;
-}
+body{ background-color: #ededed;}
+h1{ text-align: center; color: teal;}
+input{ display: none;}
 
 #container{
     display: flex;
@@ -39,11 +30,6 @@ h1{
     z-index: 2;
     cursor: zoom-out;
 }
-
-input{
-    display: none;
-}
-
 
 .add, .telecharger{
     position: absolute;

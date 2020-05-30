@@ -8,9 +8,9 @@ window.onload = () =>
       const telecharger = document.querySelector(".telecharger");
       const file        = input.files[0];
 
-      if (input.files[0] != undefined) //continue l'execution uniquement si une photo a été choisi
+      if (file != undefined) //continue l'execution uniquement si une photo a été choisi
       {
-        const imgURL    = URL.createObjectURL(file);
+        const imgURL    = URL.createObjectURL(file); //creation URL pour l'image 
         const image     = document.createElement("img");
         image.src       = imgURL;
         image.className = "vignette";
@@ -21,10 +21,19 @@ window.onload = () =>
           divOverlay .classList.toggle("overlay");
           image      .classList.toggle("fullscreen");
           telecharger.classList.toggle("hidden");
-
           download.href = imgURL;
         };
       }
     };
+
+
+  //*************Service Worker ******************/
+  // Register service worker to control making site work offline
+  if('serviceWorker' in navigator) {
+    navigator.serviceWorker
+            .register('/Camera-media/sw.js',{scope: '/Camera-media/'})
+            .then(function() { console.log('Service Worker for Camera-Media Registered'); });
+  }
+
 };
 
